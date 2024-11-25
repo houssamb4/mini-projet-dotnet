@@ -1,0 +1,38 @@
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\bin\Debug\Login.exe.config
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\bin\Debug\Login.exe
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\bin\Debug\Login.pdb
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.Form1.resources
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.Properties.Resources.resources
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.exe
+c:\users\m.ali.garba\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.pdb
+C:\Users\M.ALI.GARBA\documents\visual studio 2012\Projects\Login\Login\bin\Debug\MySql.Data.dll
+C:\Users\M.ALI.GARBA\documents\visual studio 2012\Projects\Login\Login\obj\Debug\Login.home.resources
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.exe
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.pdb
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.Form1.resources
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.home.resources
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\bin\Debug\Login.exe.config
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\bin\Debug\Login.exe
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\obj\Debug\Login.csproj.Up2Date
+C:\Users\houss\Downloads\test\Manage-Customer-main\Manage-Customer-main\Login\bin\Debug\Login.pdb
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\bin\Debug\Login.exe.config
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\bin\Debug\Login.exe
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\bin\Debug\Login.pdb
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.Dashboard.resources
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.Employe.resources
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.Form1.resources
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.home.resources
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.Resource1.resources
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.csproj.Up2Date
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.exe
+C:\Users\houss\OneDrive\Documents\4IIR\c#\projet\Partie Back-office\Login\obj\Debug\Login.pdb
