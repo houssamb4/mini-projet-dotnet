@@ -79,13 +79,9 @@ namespace Login
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string url = "https://www.example.com";
-
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = url,
-                UseShellExecute = true 
-            });
+            Form2 form = new Form2();
+            form.Show();
+            this.Hide();
         }
 
         private void txtLogIn_TextChanged(object sender, EventArgs e)
