@@ -282,6 +282,11 @@ namespace Login
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void panel1_MouseDown_2(object sender, MouseEventArgs e)
         {
             releaseCapture();

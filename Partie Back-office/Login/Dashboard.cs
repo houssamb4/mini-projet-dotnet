@@ -32,20 +32,28 @@ namespace Login
             {
                 bd.OpenConnexion();
 
-                // Count Clients
-                SqlCommand cmdClients = new SqlCommand("SELECT COUNT(*) FROM Client", bd.getConnexion);
-                int totalClients = (int)cmdClients.ExecuteScalar();
-                //lblTotalClients.Text = totalClients.ToString();
 
-                // Count Utilisateurs
-                SqlCommand cmdUsers = new SqlCommand("SELECT COUNT(*) FROM Utilisateur", bd.getConnexion);
-                int totalUsers = (int)cmdUsers.ExecuteScalar();
-                //lblTotalUsers.Text = totalUsers.ToString();
-
-                // Count Reservations
                 SqlCommand cmdReservations = new SqlCommand("SELECT COUNT(*) FROM reservation", bd.getConnexion);
-                int totalReservations = (int)cmdReservations.ExecuteScalar();
+                object resultReservations = cmdReservations.ExecuteScalar();
+                int totalReservations = resultReservations != null ? Convert.ToInt32(resultReservations) : 0;
                 label13.Text = totalReservations.ToString();
+
+                SqlCommand cmdPaiements = new SqlCommand("SELECT COUNT(*) FROM paiement", bd.getConnexion);
+                object resultPaiements = cmdPaiements.ExecuteScalar();
+                int totalPaiements = resultPaiements != null ? Convert.ToInt32(resultPaiements) : 0;
+                label14.Text = totalPaiements.ToString();
+
+                SqlCommand cmdPendingReservations = new SqlCommand("SELECT COUNT(*) FROM reservation WHERE status = 'pending'", bd.getConnexion);
+                object resultPendingReservations = cmdPendingReservations.ExecuteScalar();
+                int totalPendingReservations = resultPendingReservations != null ? Convert.ToInt32(resultPendingReservations) : 0;
+                label15.Text = totalPendingReservations.ToString();
+
+                SqlCommand cmdAvailableRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 0", bd.getConnexion);
+                object resultAvailableRooms = cmdAvailableRooms.ExecuteScalar();
+                int totalAvailableRooms = resultAvailableRooms != null ? Convert.ToInt32(resultAvailableRooms) : 0;
+                label16.Text = totalAvailableRooms.ToString();
+
+
 
                 bd.CloseConnexion();
             }
@@ -202,6 +210,11 @@ namespace Login
 
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
