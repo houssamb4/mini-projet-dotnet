@@ -22,5 +22,16 @@ namespace Login.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HP\\SQLEXPRESS;Initial Catalog=hotel;Integrated Security=True;TrustSer" +
+            "verCertificate=True")]
+        public string hotelConnectionString {
+            get {
+                return ((string)(this["hotelConnectionString"]));
+            }
+        }
     }
 }

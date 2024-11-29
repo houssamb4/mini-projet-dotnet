@@ -63,9 +63,58 @@ namespace Login
             }
         }
 
+        private int GetCurrentUserId()
+        {
+            // Access the property directly
+            return Login.LoggedInUserID;
+        }
+
+
+        private void UpdateUserStatus()
+        {
+            string updateQuery = @"
+        UPDATE Utilisateur
+        SET status = 'offline', last_login = GETDATE()
+        WHERE id = @UserId";
+
+            try
+            {
+                bd.OpenConnexion();
+                using (SqlConnection connection = bd.getConnexion)
+                {
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        int userId = GetCurrentUserId();
+
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                bd.CloseConnexion();
+            }
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                UpdateUserStatus();
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors gracefully
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -80,40 +129,7 @@ namespace Login
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Create the columns
-            dataGridView1.Columns.Add("Activity", "Activity");
-            dataGridView1.Columns.Add("PerformedBy", "Performed By");
-            dataGridView1.Columns.Add("DateTime", "Date & Time");
-            dataGridView1.Columns.Add("Status", "Status");
 
-            // Add sample rows
-            dataGridView1.Rows.Add("Reservation #1024 confirmed", "Admin John", "2024-11-23 10:30 AM", "Confirmed");
-            dataGridView1.Rows.Add("Payment of $300 received for Reservation #1020", "Admin Sarah", "2024-11-22 04:15 PM", "Paid");
-            dataGridView1.Rows.Add("Room #101 assigned to John Doe", "Admin Sarah", "2024-11-22 02:00 PM", "Assigned");
-
-            // Optionally, format the Status column
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                string status = row.Cells["Status"].Value.ToString();
-                if (status == "Confirmed")
-                {
-                    row.Cells["Status"].Style.BackColor = Color.Green;
-                    row.Cells["Status"].Style.ForeColor = Color.White;
-                }
-                else if (status == "Paid")
-                {
-                    row.Cells["Status"].Style.BackColor = Color.Blue;
-                    row.Cells["Status"].Style.ForeColor = Color.White;
-                }
-                else if (status == "Assigned")
-                {
-                    row.Cells["Status"].Style.BackColor = Color.Orange;
-                    row.Cells["Status"].Style.ForeColor = Color.White;
-                }
-            }
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -160,6 +176,9 @@ namespace Login
 
         private void button5_Click(object sender, EventArgs e)
         {
+            Rooms rom = new Rooms();
+            rom.Show();
+            this.Hide();
 
         }
 

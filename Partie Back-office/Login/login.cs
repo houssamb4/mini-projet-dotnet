@@ -8,6 +8,7 @@ namespace Login
         Database bd = new Database();
 
         public static string LoggedInUserFullName { get; private set; }
+        public static int LoggedInUserID { get; private set; }
 
         public bool VerificationDesChamps(string email, string password)
         {
@@ -25,7 +26,18 @@ namespace Login
                 while (resultat.Read())
                 {
                     LoggedInUserFullName = resultat["nom_complet"].ToString();
+                    LoggedInUserID = int.Parse(resultat["id"].ToString());
                 }
+
+                resultat.Close(); // Close the reader before executing another command
+
+                // Update user status and last_login
+                SqlCommand updateCmd = new SqlCommand(
+                    "UPDATE Utilisateur SET status = 'online', last_login = NULL WHERE id = @UserId",
+                    bd.getConnexion
+                );
+                updateCmd.Parameters.AddWithValue("@UserId", LoggedInUserID);
+                updateCmd.ExecuteNonQuery();
 
                 bd.CloseConnexion();
                 return true;

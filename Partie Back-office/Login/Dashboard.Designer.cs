@@ -39,7 +39,6 @@ namespace Login
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,7 +84,6 @@ namespace Login
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -122,10 +120,10 @@ namespace Login
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel7.BackColor = System.Drawing.Color.DimGray;
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label11);
-            this.panel7.Location = new System.Drawing.Point(770, 139);
+            this.panel7.Location = new System.Drawing.Point(769, 139);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(175, 96);
@@ -155,10 +153,10 @@ namespace Login
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel6.BackColor = System.Drawing.Color.DimGray;
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Location = new System.Drawing.Point(572, 139);
+            this.panel6.Location = new System.Drawing.Point(573, 139);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(175, 96);
@@ -187,10 +185,10 @@ namespace Login
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel5.BackColor = System.Drawing.Color.DimGray;
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(377, 139);
+            this.panel5.Location = new System.Drawing.Point(376, 139);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(175, 96);
@@ -253,7 +251,7 @@ namespace Login
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Location = new System.Drawing.Point(178, 139);
@@ -264,7 +262,7 @@ namespace Login
             // 
             // label13
             // 
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(0, 53);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
@@ -304,14 +302,6 @@ namespace Login
             this.button1.TabIndex = 28;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 19);
-            this.label6.TabIndex = 27;
             // 
             // panel2
             // 
@@ -411,6 +401,7 @@ namespace Login
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.button8);
@@ -441,10 +432,10 @@ namespace Login
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(97, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -517,7 +508,7 @@ namespace Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(966, 602);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -545,7 +536,6 @@ namespace Login
 
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;

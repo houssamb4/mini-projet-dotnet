@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace Login
 {
     public partial class Employe : Form
@@ -25,6 +26,7 @@ namespace Login
 
         private void utilisateur_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelDataSet.Utilisateur' table. You can move, or remove it, as needed.
             label2.Text = Login.LoggedInUserFullName;
 
 
@@ -37,12 +39,10 @@ namespace Login
             {
                 bd.OpenConnexion();
 
-                // Count Clients
                 SqlCommand cmdClients = new SqlCommand("SELECT COUNT(*) FROM Client", bd.getConnexion);
                 int totalClients = (int)cmdClients.ExecuteScalar();
                 //lblTotalClients.Text = totalClients.ToString();
 
-                // Count Utilisateurs
                 SqlCommand cmdUsers = new SqlCommand("SELECT COUNT(*) FROM Utilisateur", bd.getConnexion);
                 int totalUsers = (int)cmdUsers.ExecuteScalar();
                 //lblTotalUsers.Text = totalUsers.ToString();
@@ -60,16 +60,73 @@ namespace Login
             }
         }
 
+        private int GetCurrentUserId()
+        {
+            // Access the property directly
+            return Login.LoggedInUserID;
+        }
+
+
+        private void UpdateUserStatus()
+        {
+            string updateQuery = @"
+        UPDATE Utilisateur
+        SET status = 'offline', last_login = GETDATE()
+        WHERE id = @UserId";
+
+            try
+            {
+                bd.OpenConnexion(); 
+                using (SqlConnection connection = bd.getConnexion)
+                {
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        int userId = GetCurrentUserId();
+
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                bd.CloseConnexion(); 
+            }
+        }
+
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                UpdateUserStatus();
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors gracefully
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void releaseCapture();
+        private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int lParam);
+        private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        // Example usage for dragging the form
+        private void Form_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0xF012, 0);
+        }
 
         private void tableauClient_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -120,7 +177,9 @@ namespace Login
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Rooms rom = new Rooms();
+            rom.Show();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -148,9 +207,14 @@ namespace Login
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void panel1_MouseDown_2(object sender, MouseEventArgs e)
         {
-            releaseCapture();
+            ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }

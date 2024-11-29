@@ -18,11 +18,11 @@ namespace Login
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUpdateClt = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -30,10 +30,6 @@ namespace Login
             this.ErrorPhone = new System.Windows.Forms.Label();
             this.ErrorEmail = new System.Windows.Forms.Label();
             this.ErrorNom = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAdresse = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,25 +54,33 @@ namespace Login
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableauClient)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnUpdateClt);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.ErrorAdresse);
             this.panel1.Controls.Add(this.ErrorPhone);
             this.panel1.Controls.Add(this.ErrorEmail);
             this.panel1.Controls.Add(this.ErrorNom);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.txtAdresse);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtPhone);
@@ -101,8 +105,8 @@ namespace Login
             this.btnUpdateClt.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnUpdateClt.FlatAppearance.BorderSize = 2;
             this.btnUpdateClt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateClt.ForeColor = System.Drawing.Color.Teal;
-            this.btnUpdateClt.Location = new System.Drawing.Point(386, 216);
+            this.btnUpdateClt.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdateClt.Location = new System.Drawing.Point(392, 288);
             this.btnUpdateClt.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateClt.Name = "btnUpdateClt";
             this.btnUpdateClt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -117,7 +121,7 @@ namespace Login
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(890, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(890, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
@@ -131,7 +135,7 @@ namespace Login
             this.ErrorAdresse.AutoSize = true;
             this.ErrorAdresse.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ErrorAdresse.ForeColor = System.Drawing.Color.Red;
-            this.ErrorAdresse.Location = new System.Drawing.Point(712, 175);
+            this.ErrorAdresse.Location = new System.Drawing.Point(712, 249);
             this.ErrorAdresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ErrorAdresse.Name = "ErrorAdresse";
             this.ErrorAdresse.Size = new System.Drawing.Size(157, 18);
@@ -144,20 +148,21 @@ namespace Login
             this.ErrorPhone.AutoSize = true;
             this.ErrorPhone.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ErrorPhone.ForeColor = System.Drawing.Color.Red;
-            this.ErrorPhone.Location = new System.Drawing.Point(712, 139);
+            this.ErrorPhone.Location = new System.Drawing.Point(712, 208);
             this.ErrorPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ErrorPhone.Name = "ErrorPhone";
             this.ErrorPhone.Size = new System.Drawing.Size(174, 18);
             this.ErrorPhone.TabIndex = 23;
             this.ErrorPhone.Text = "Numero de Telephone Requis";
             this.ErrorPhone.Visible = false;
+            this.ErrorPhone.Click += new System.EventHandler(this.ErrorPhone_Click);
             // 
             // ErrorEmail
             // 
             this.ErrorEmail.AutoSize = true;
             this.ErrorEmail.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ErrorEmail.ForeColor = System.Drawing.Color.Red;
-            this.ErrorEmail.Location = new System.Drawing.Point(739, 106);
+            this.ErrorEmail.Location = new System.Drawing.Point(737, 167);
             this.ErrorEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ErrorEmail.Name = "ErrorEmail";
             this.ErrorEmail.Size = new System.Drawing.Size(82, 18);
@@ -170,73 +175,14 @@ namespace Login
             this.ErrorNom.AutoSize = true;
             this.ErrorNom.Font = new System.Drawing.Font("Comic Sans MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ErrorNom.ForeColor = System.Drawing.Color.Red;
-            this.ErrorNom.Location = new System.Drawing.Point(712, 76);
+            this.ErrorNom.Location = new System.Drawing.Point(708, 136);
             this.ErrorNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ErrorNom.Name = "ErrorNom";
             this.ErrorNom.Size = new System.Drawing.Size(140, 18);
             this.ErrorNom.TabIndex = 21;
             this.ErrorNom.Text = "Nom et Prenom Requis!";
             this.ErrorNom.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Location = new System.Drawing.Point(216, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(633, 57);
-            this.panel2.TabIndex = 20;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.White;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnAdd.FlatAppearance.BorderSize = 2;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.Teal;
-            this.btnAdd.Location = new System.Drawing.Point(13, 4);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(202, 45);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Ajouter Nouveau Client";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.White;
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnUpdate.FlatAppearance.BorderSize = 2;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.Teal;
-            this.btnUpdate.Location = new System.Drawing.Point(220, 4);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(202, 45);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Mettre à jour Client";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.White;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.btnDelete.FlatAppearance.BorderSize = 2;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.Teal;
-            this.btnDelete.Location = new System.Drawing.Point(424, 4);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(202, 45);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Supprimer Client";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.ErrorNom.Click += new System.EventHandler(this.ErrorNom_Click);
             // 
             // label6
             // 
@@ -248,7 +194,7 @@ namespace Login
             // 
             // txtAdresse
             // 
-            this.txtAdresse.Location = new System.Drawing.Point(341, 167);
+            this.txtAdresse.Location = new System.Drawing.Point(341, 241);
             this.txtAdresse.Margin = new System.Windows.Forms.Padding(2);
             this.txtAdresse.Name = "txtAdresse";
             this.txtAdresse.Size = new System.Drawing.Size(348, 32);
@@ -258,7 +204,7 @@ namespace Login
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(268, 171);
+            this.label5.Location = new System.Drawing.Point(256, 246);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 21);
@@ -268,7 +214,7 @@ namespace Login
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(341, 133);
+            this.txtPhone.Location = new System.Drawing.Point(341, 200);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(348, 32);
@@ -278,7 +224,7 @@ namespace Login
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(248, 138);
+            this.label3.Location = new System.Drawing.Point(242, 205);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 21);
@@ -288,17 +234,18 @@ namespace Login
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(341, 101);
+            this.txtEmail.Location = new System.Drawing.Point(341, 164);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(348, 32);
             this.txtEmail.TabIndex = 13;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(282, 103);
+            this.label2.Location = new System.Drawing.Point(276, 169);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 21);
@@ -307,7 +254,7 @@ namespace Login
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(341, 67);
+            this.txtNom.Location = new System.Drawing.Point(341, 128);
             this.txtNom.Margin = new System.Windows.Forms.Padding(2);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(348, 32);
@@ -317,31 +264,32 @@ namespace Login
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 72);
+            this.label1.Location = new System.Drawing.Point(218, 133);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 10;
             this.label1.Text = "Nom Complet :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableauClient
             // 
             this.tableauClient.AllowUserToAddRows = false;
             this.tableauClient.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Honeydew;
-            this.tableauClient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Honeydew;
+            this.tableauClient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
             this.tableauClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableauClient.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.tableauClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tableauClient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableauClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableauClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.tableauClient.ColumnHeadersHeight = 52;
             this.tableauClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tableauClient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -350,29 +298,29 @@ namespace Login
             this.email,
             this.telephone,
             this.Adresse});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableauClient.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableauClient.DefaultCellStyle = dataGridViewCellStyle39;
             this.tableauClient.GridColor = System.Drawing.Color.LightGray;
-            this.tableauClient.Location = new System.Drawing.Point(162, 290);
+            this.tableauClient.Location = new System.Drawing.Point(171, 359);
             this.tableauClient.Name = "tableauClient";
             this.tableauClient.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.tableauClient.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.White;
+            this.tableauClient.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.tableauClient.RowHeadersWidth = 60;
             this.tableauClient.RowTemplate.Height = 30;
             this.tableauClient.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableauClient.Size = new System.Drawing.Size(767, 292);
+            this.tableauClient.Size = new System.Drawing.Size(767, 223);
             this.tableauClient.TabIndex = 9;
             this.tableauClient.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableauClient_CellContentClick_1);
             this.tableauClient.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableauClient_CellMouseEnter);
@@ -408,8 +356,8 @@ namespace Login
             // 
             // Adresse
             // 
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Adresse.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Adresse.DefaultCellStyle = dataGridViewCellStyle38;
             this.Adresse.HeaderText = "Adresse";
             this.Adresse.MinimumWidth = 6;
             this.Adresse.Name = "Adresse";
@@ -417,6 +365,7 @@ namespace Login
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button7);
@@ -435,10 +384,10 @@ namespace Login
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(104, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
@@ -519,11 +468,89 @@ namespace Login
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(956, 51);
+            this.panel4.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(166, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 25);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Clients";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.Teal;
+            this.btnDelete.Location = new System.Drawing.Point(442, 74);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(202, 45);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Supprimer Client";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.Teal;
+            this.btnUpdate.Location = new System.Drawing.Point(667, 74);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(202, 45);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Mettre à jour Client";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnAdd.FlatAppearance.BorderSize = 2;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.Teal;
+            this.btnAdd.Location = new System.Drawing.Point(210, 74);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(202, 45);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Ajouter Nouveau Client";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(689, 12);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 25);
+            this.label7.TabIndex = 32;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(966, 602);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -536,10 +563,11 @@ namespace Login
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableauClient)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -557,10 +585,6 @@ namespace Login
         private System.Windows.Forms.TextBox txtAdresse;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label ErrorNom;
         private System.Windows.Forms.Label ErrorEmail;
         private System.Windows.Forms.Label ErrorPhone;
@@ -580,5 +604,11 @@ namespace Login
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Panel panel4;
+        private Label label4;
+        private Button btnAdd;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private Label label7;
     }
 }

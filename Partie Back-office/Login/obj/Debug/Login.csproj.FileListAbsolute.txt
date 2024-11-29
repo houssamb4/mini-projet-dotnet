@@ -51,3 +51,4 @@ C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Logi
 C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.csproj.Up2Date
 C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.exe
 C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.pdb
+C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.Rooms.resources

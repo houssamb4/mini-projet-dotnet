@@ -13,6 +13,9 @@ namespace Login
         public home()
         {
             InitializeComponent();
+
+            label7.Text = Login.LoggedInUserFullName;
+
         }
 
         Database bd = new Database();
@@ -115,7 +118,7 @@ namespace Login
                 bd.OpenConnexion();
                 tableauClient.Rows.Clear();
 
-                SqlCommand cmd = new SqlCommand("SELECT id, nom_complet, email, telephone, Adresse FROM Client", bd.getConnexion); // Ensure column names are correct
+                SqlCommand cmd = new SqlCommand("SELECT id, nom_complet, email, telephone, Adresse FROM Client", bd.getConnexion);
                 result = cmd.ExecuteReader();
 
                 while (result.Read())
@@ -155,9 +158,58 @@ namespace Login
             }
         }
 
+        private int GetCurrentUserId()
+        {
+            // Access the property directly
+            return Login.LoggedInUserID;
+        }
+
+
+        private void UpdateUserStatus()
+        {
+            string updateQuery = @"
+        UPDATE Utilisateur
+        SET status = 'offline', last_login = GETDATE()
+        WHERE id = @UserId";
+
+            try
+            {
+                bd.OpenConnexion();
+                using (SqlConnection connection = bd.getConnexion)
+                {
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        int userId = GetCurrentUserId();
+
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                bd.CloseConnexion();
+            }
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                UpdateUserStatus();
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors gracefully
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -269,7 +321,9 @@ namespace Login
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Rooms rom = new Rooms();
+            rom.Show();
+            this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -283,6 +337,36 @@ namespace Login
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ErrorPhone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ErrorNom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
