@@ -85,3 +85,6 @@ C:\Users\houss\OneDrive\Documents\4IIR\c#\GitHub\houssamb4\mini-projet-dotnet\Pa
 C:\Users\houss\OneDrive\Documents\4IIR\c#\GitHub\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.csproj.Up2Date
 C:\Users\houss\OneDrive\Documents\4IIR\c#\GitHub\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.exe
 C:\Users\houss\OneDrive\Documents\4IIR\c#\GitHub\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.pdb
+C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.Account.resources
+C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.Payments.resources
+C:\Users\houss\source\repos\houssamb4\mini-projet-dotnet\Partie Back-office\Login\obj\Debug\Login.Reservation.resources

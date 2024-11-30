@@ -131,7 +131,7 @@ namespace Login
             // 
             // label16
             // 
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label16.Location = new System.Drawing.Point(0, 53);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
@@ -164,7 +164,7 @@ namespace Login
             // 
             // label15
             // 
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label15.Location = new System.Drawing.Point(0, 53);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
@@ -196,7 +196,7 @@ namespace Login
             // 
             // label14
             // 
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label14.Location = new System.Drawing.Point(0, 53);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
