@@ -184,6 +184,9 @@ namespace Login
 
         private void button8_Click(object sender, EventArgs e)
         {
+            Account acc = new Account();
+            acc.Show();
+            this.Hide();
 
         }
 
