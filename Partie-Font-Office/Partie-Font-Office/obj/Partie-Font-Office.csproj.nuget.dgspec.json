@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj": {}
+    "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\projet\\mini-projet-dotnet\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj": {}
   },
   "projects": {
-    "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj": {
+    "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\projet\\mini-projet-dotnet\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj",
+        "projectUniqueName": "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\projet\\mini-projet-dotnet\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj",
         "projectName": "Partie-Font-Office",
-        "projectPath": "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj",
+        "projectPath": "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\projet\\mini-projet-dotnet\\Partie-Font-Office\\Partie-Font-Office\\Partie-Font-Office.csproj",
         "packagesPath": "C:\\Users\\houss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\Partie-Font-Office\\Partie-Font-Office\\obj\\",
+        "outputPath": "C:\\Users\\houss\\OneDrive\\Documents\\4IIR\\c#\\projet\\mini-projet-dotnet\\Partie-Font-Office\\Partie-Font-Office\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

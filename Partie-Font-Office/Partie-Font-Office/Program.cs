@@ -1,12 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();  // Adding MVC support
-builder.Services.AddRazorPages();  // Retaining Razor Pages support
+builder.Services.AddControllersWithViews();  
+builder.Services.AddRazorPages();  
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -20,17 +18,14 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-// Enable routing for both MVC and Razor Pages
 app.UseRouting();
 
-// Enable authorization if needed
 app.UseAuthorization();
 
-// Map MVC controllers and Razor Pages
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");  // MVC default route
+    pattern: "{controller=Home}/{action=Index}/{id?}");  
 
-app.MapRazorPages();  // Razor Pages route
+app.MapRazorPages(); 
 
 app.Run();
