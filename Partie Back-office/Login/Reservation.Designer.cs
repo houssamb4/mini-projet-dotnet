@@ -2,7 +2,7 @@
 
 namespace Login
 {
-    partial class Rooms
+    partial class Reservation
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -17,7 +17,7 @@ namespace Login
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rooms));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -43,11 +43,11 @@ namespace Login
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -56,7 +56,6 @@ namespace Login
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -64,10 +63,9 @@ namespace Login
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,7 +89,7 @@ namespace Login
             this.panel1.Location = new System.Drawing.Point(5, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(956, 602);
+            this.panel1.Size = new System.Drawing.Size(955, 602);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_2);
@@ -244,9 +242,9 @@ namespace Login
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(174, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 23);
+            this.label5.Size = new System.Drawing.Size(216, 23);
             this.label5.TabIndex = 33;
-            this.label5.Text = "Room Management ";
+            this.label5.Text = "Reservations Management ";
             // 
             // label4
             // 
@@ -336,7 +334,6 @@ namespace Login
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -346,27 +343,15 @@ namespace Login
             this.panel2.Size = new System.Drawing.Size(961, 53);
             this.panel2.TabIndex = 29;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(901, 3);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(179, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 23);
+            this.label3.Size = new System.Drawing.Size(107, 23);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Rooms";
+            this.label3.Text = "Reservations";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
@@ -383,6 +368,7 @@ namespace Login
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(901, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
@@ -395,7 +381,7 @@ namespace Login
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
@@ -408,6 +394,17 @@ namespace Login
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(157, 602);
             this.panel3.TabIndex = 28;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 72);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
             // 
             // button8
             // 
@@ -432,19 +429,21 @@ namespace Login
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
             this.button6.Location = new System.Drawing.Point(11, 336);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(129, 52);
             this.button6.TabIndex = 12;
             this.button6.Text = "Reservations";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button5.Location = new System.Drawing.Point(11, 270);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
@@ -491,27 +490,16 @@ namespace Login
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(32, 3);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(93, 72);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 39;
-            this.pictureBox4.TabStop = false;
-            // 
-            // Rooms
+            // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(966, 602);
+            this.ClientSize = new System.Drawing.Size(965, 602);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Rooms";
+            this.Name = "Reservation";
             this.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "home";
@@ -525,10 +513,9 @@ namespace Login
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,7 +546,6 @@ namespace Login
         private Label label7;
         private Label label5;
         private Label label4;
-        private PictureBox pictureBox3;
         private Panel panel7;
         public Label label14;
         private Label label15;
@@ -572,6 +558,6 @@ namespace Login
         private Panel panel4;
         public Label label13;
         private Label label8;
-        private PictureBox pictureBox4;
+        private PictureBox pictureBox1;
     }
 }
