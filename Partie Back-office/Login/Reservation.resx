@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEacSURBVHhe7d0J
+        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEacSURBVHhe7d0J
         nCNlnf/x5hIUlXX/7t/V9dxl1/3vrKxjUtUzzAwkVT0NAwzI0XJfch8CIit4MnKJq6IIooCADJeiKIe3
         KLeAwiL3MdznMHenKkmn00n9nyfzY5mtfobpJJVUVfL5vl7vlZ3uTn5VefL8clQ9NUAISXaCXG7D4pzM
         u313cAvfzc71HHvEy1uHFlz7s75rneE51nmek71S/e916t9/r/73T8o96vcW+XnrafXfK0LGlSBE/9v/

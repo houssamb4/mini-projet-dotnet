@@ -38,27 +38,21 @@ namespace Login
             {
                 bd.OpenConnexion();
 
-
-                SqlCommand cmdReservations = new SqlCommand("SELECT COUNT(*) FROM reservation", bd.getConnexion);
-                object resultReservations = cmdReservations.ExecuteScalar();
-                int totalReservations = resultReservations != null ? Convert.ToInt32(resultReservations) : 0;
-                label13.Text = totalReservations.ToString();
-
                 SqlCommand cmdPaiements = new SqlCommand("SELECT COUNT(*) FROM paiement", bd.getConnexion);
                 object resultPaiements = cmdPaiements.ExecuteScalar();
                 int totalPaiements = resultPaiements != null ? Convert.ToInt32(resultPaiements) : 0;
                 label14.Text = totalPaiements.ToString();
 
-                SqlCommand cmdPendingReservations = new SqlCommand("SELECT COUNT(*) FROM reservation WHERE status = 'pending'", bd.getConnexion);
-                object resultPendingReservations = cmdPendingReservations.ExecuteScalar();
-                int totalPendingReservations = resultPendingReservations != null ? Convert.ToInt32(resultPendingReservations) : 0;
-                label15.Text = totalPendingReservations.ToString();
-
-                SqlCommand cmdAvailableRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 0", bd.getConnexion);
+                SqlCommand cmdAvailableRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 'Available'", bd.getConnexion);
                 object resultAvailableRooms = cmdAvailableRooms.ExecuteScalar();
                 int totalAvailableRooms = resultAvailableRooms != null ? Convert.ToInt32(resultAvailableRooms) : 0;
-                label12.Text = totalAvailableRooms.ToString();
+                label9.Text = totalAvailableRooms.ToString();
 
+
+                SqlCommand cmdRooms = new SqlCommand("SELECT COUNT(*) FROM chambre", bd.getConnexion);
+                object resultRooms = cmdRooms.ExecuteScalar();
+                int totalRooms = resultRooms != null ? Convert.ToInt32(resultRooms) : 0;
+                label13.Text = totalRooms.ToString();
 
 
                 bd.CloseConnexion();

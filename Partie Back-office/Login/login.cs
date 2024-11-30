@@ -29,9 +29,8 @@ namespace Login
                     LoggedInUserID = int.Parse(resultat["id"].ToString());
                 }
 
-                resultat.Close(); // Close the reader before executing another command
+                resultat.Close(); 
 
-                // Update user status and last_login
                 SqlCommand updateCmd = new SqlCommand(
                     "UPDATE Utilisateur SET status = 'online', last_login = NULL WHERE id = @UserId",
                     bd.getConnexion

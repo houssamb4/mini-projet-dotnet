@@ -32,40 +32,70 @@ namespace Login
             {
                 bd.OpenConnexion();
 
+                try
+                {
+                    SqlCommand cmdReservations = new SqlCommand("SELECT COUNT(*) FROM reservation", bd.getConnexion);
+                    object resultReservations = cmdReservations.ExecuteScalar();
+                    int totalReservations = resultReservations != null ? Convert.ToInt32(resultReservations) : 0;
+                    label13.Text = totalReservations.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading reservations count: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    label13.Text = "Error";
+                }
 
-                SqlCommand cmdReservations = new SqlCommand("SELECT COUNT(*) FROM reservation", bd.getConnexion);
-                object resultReservations = cmdReservations.ExecuteScalar();
-                int totalReservations = resultReservations != null ? Convert.ToInt32(resultReservations) : 0;
-                label13.Text = totalReservations.ToString();
+                try
+                {
+                    SqlCommand cmdPaiements = new SqlCommand("SELECT COUNT(*) FROM paiement", bd.getConnexion);
+                    object resultPaiements = cmdPaiements.ExecuteScalar();
+                    int totalPaiements = resultPaiements != null ? Convert.ToInt32(resultPaiements) : 0;
+                    label14.Text = totalPaiements.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading payments count: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    label14.Text = "Error";
+                }
 
-                SqlCommand cmdPaiements = new SqlCommand("SELECT COUNT(*) FROM paiement", bd.getConnexion);
-                object resultPaiements = cmdPaiements.ExecuteScalar();
-                int totalPaiements = resultPaiements != null ? Convert.ToInt32(resultPaiements) : 0;
-                label14.Text = totalPaiements.ToString();
+                try
+                {
+                    SqlCommand cmdPendingReservations = new SqlCommand("SELECT COUNT(*) FROM reservation WHERE status = 'pending'", bd.getConnexion);
+                    object resultPendingReservations = cmdPendingReservations.ExecuteScalar();
+                    int totalPendingReservations = resultPendingReservations != null ? Convert.ToInt32(resultPendingReservations) : 0;
+                    label16.Text = totalPendingReservations.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading pending reservations count: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    label16.Text = "Error";
+                }
 
-                SqlCommand cmdPendingReservations = new SqlCommand("SELECT COUNT(*) FROM reservation WHERE status = 'pending'", bd.getConnexion);
-                object resultPendingReservations = cmdPendingReservations.ExecuteScalar();
-                int totalPendingReservations = resultPendingReservations != null ? Convert.ToInt32(resultPendingReservations) : 0;
-                label15.Text = totalPendingReservations.ToString();
-
-                SqlCommand cmdAvailableRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 0", bd.getConnexion);
-                object resultAvailableRooms = cmdAvailableRooms.ExecuteScalar();
-                int totalAvailableRooms = resultAvailableRooms != null ? Convert.ToInt32(resultAvailableRooms) : 0;
-                label16.Text = totalAvailableRooms.ToString();
-
-
-
-                bd.CloseConnexion();
+                try
+                {
+                    SqlCommand cmdAvailableRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 'Available'", bd.getConnexion);
+                    object resultAvailableRooms = cmdAvailableRooms.ExecuteScalar();
+                    int totalAvailableRooms = resultAvailableRooms != null ? Convert.ToInt32(resultAvailableRooms) : 0;
+                    label15.Text = totalAvailableRooms.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading available rooms count: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    label15.Text = "Error";
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                bd.CloseConnexion();
+            }
         }
 
         private int GetCurrentUserId()
         {
-            // Access the property directly
             return Login.LoggedInUserID;
         }
 
