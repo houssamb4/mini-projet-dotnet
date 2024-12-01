@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|c:\\users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\partie back-office\\login\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\employe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\employe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\employe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|c:\\users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\partie back-office\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,20 +107,12 @@
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\account.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\account.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|solutionrelative:login\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{127A729D-D887-4753-A47E-35EE998C3724}|Login\\Login.csproj|C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 35,
           "Children": [
             {
               "$type": "Bookmark",
@@ -161,25 +161,38 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\login.cs",
-              "RelativeDocumentMoniker": "Login\\login.cs",
-              "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\login.cs",
-              "RelativeToolTip": "Login\\login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:07:23.54Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\login.cs",
+              "RelativeDocumentMoniker": "Login\\login.cs",
+              "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\login.cs",
+              "RelativeToolTip": "Login\\login.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA6wCQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T20:07:23.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Reservation.cs",
+              "RelativeDocumentMoniker": "Login\\Reservation.cs",
+              "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Reservation.cs",
+              "RelativeToolTip": "Login\\Reservation.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAQwDQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T12:01:53.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Form2.cs",
               "RelativeDocumentMoniker": "Login\\Form2.cs",
@@ -190,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Reservation.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Reservation.cs",
               "RelativeDocumentMoniker": "Login\\Reservation.cs",
@@ -202,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Payments.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Payments.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Payments.Designer.cs",
@@ -214,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Payments.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Payments.cs",
               "RelativeDocumentMoniker": "Login\\Payments.cs",
@@ -226,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Payments.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Payments.cs",
               "RelativeDocumentMoniker": "Login\\Payments.cs",
@@ -237,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Reservation.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Reservation.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Reservation.Designer.cs",
@@ -250,20 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Reservation.cs",
-              "RelativeDocumentMoniker": "Login\\Reservation.cs",
-              "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Reservation.cs",
-              "RelativeToolTip": "Login\\Reservation.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T12:01:53.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Account.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Account.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Account.Designer.cs",
@@ -271,12 +271,11 @@
               "RelativeToolTip": "Login\\Account.Designer.cs",
               "ViewState": "AgIAAFsBAAAAAAAAAAAWwF0BAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T21:28:17.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T21:28:17.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Account.cs",
               "RelativeDocumentMoniker": "Login\\Account.cs",
@@ -284,49 +283,46 @@
               "RelativeToolTip": "Login\\Account.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T21:27:32.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T21:27:32.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Account.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Account.cs",
               "RelativeDocumentMoniker": "Login\\Account.cs",
               "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Account.cs [Design]",
               "RelativeToolTip": "Login\\Account.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T21:26:05.043Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-29T21:26:05.043Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "home.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\home.cs",
               "RelativeDocumentMoniker": "Login\\home.cs",
               "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\home.cs [Design]",
               "RelativeToolTip": "Login\\home.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:13:35.71Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T20:13:35.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Employe.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Employe.cs",
               "RelativeDocumentMoniker": "Login\\Employe.cs",
               "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Employe.cs",
               "RelativeToolTip": "Login\\Employe.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANYAAAAAAAAAAAAWwNwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T19:59:32.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Dashboard.cs",
               "RelativeDocumentMoniker": "Login\\Dashboard.cs",
@@ -334,12 +330,11 @@
               "RelativeToolTip": "Login\\Dashboard.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAAAFkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:40:47.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T18:40:47.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Rooms.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Rooms.cs",
               "RelativeDocumentMoniker": "Login\\Rooms.cs",
@@ -351,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "home.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\home.cs",
               "RelativeDocumentMoniker": "Login\\home.cs",
@@ -359,12 +354,11 @@
               "RelativeToolTip": "Login\\home.cs",
               "ViewState": "AgIAADsBAAAAAAAAAAAowGwBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:13:40.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T20:13:40.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Rooms.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Rooms.cs",
               "RelativeDocumentMoniker": "Login\\Rooms.cs",
@@ -375,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Rooms.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Rooms.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Rooms.Designer.cs",
@@ -387,19 +381,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Dashboard.cs",
               "RelativeDocumentMoniker": "Login\\Dashboard.cs",
               "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Dashboard.cs [Design]",
               "RelativeToolTip": "Login\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:40:42.744Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T18:40:42.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Dashboard.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Dashboard.Designer.cs",
@@ -407,12 +400,11 @@
               "RelativeToolTip": "Login\\Dashboard.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T13:05:44.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T13:05:44.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "home.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\home.Designer.cs",
               "RelativeDocumentMoniker": "Login\\home.Designer.cs",
@@ -420,12 +412,11 @@
               "RelativeToolTip": "Login\\home.Designer.cs",
               "ViewState": "AgIAAAYBAAAAAAAAAAAswEYBAACKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:45:54.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T12:45:54.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Employe.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Employe.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Employe.Designer.cs",
@@ -438,19 +429,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 3,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Client.cs",
               "RelativeDocumentMoniker": "Login\\Client.cs",
               "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Client.cs",
               "RelativeToolTip": "Login\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T20:09:53.356Z"
+              "WhenOpened": "2024-11-25T20:09:53.356Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "SignUp.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\SignUp.cs",
               "RelativeDocumentMoniker": "Login\\SignUp.cs",
@@ -462,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "Login\\Form2.Designer.cs",
@@ -510,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
@@ -521,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Employe.cs [Design]",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Employe.cs",
               "RelativeDocumentMoniker": "Login\\Employe.cs",
@@ -533,15 +525,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 4,
               "Title": "Database.cs",
               "DocumentMoniker": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Database.cs",
               "RelativeDocumentMoniker": "Login\\Database.cs",
               "ToolTip": "C:\\Users\\houss\\source\\repos\\houssamb4\\mini-projet-dotnet\\Partie Back-office\\Login\\Database.cs",
               "RelativeToolTip": "Login\\Database.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T18:40:52.792Z"
+              "WhenOpened": "2024-11-25T18:40:52.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

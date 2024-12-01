@@ -46,7 +46,20 @@ namespace Login
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
 
-                    dataGridView1.DataSource = dataTable; 
+                    dataGridView1.AutoGenerateColumns = false;
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        var lastLogin = row["last_login"] == DBNull.Value ? DateTime.Now : row["last_login"];
+
+                        dataGridView1.Rows.Add(
+                            row["nom_complet"],
+                            row["email"],
+                            row["status"],
+                            lastLogin,
+                            row["created_at"]
+                        );
+                    }
                 }
             }
             catch (Exception ex)
@@ -59,9 +72,10 @@ namespace Login
             }
         }
 
+
+
         private int GetCurrentUserId()
         {
-            // Access the property directly
             return Login.LoggedInUserID;
         }
 
@@ -207,6 +221,11 @@ namespace Login
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
