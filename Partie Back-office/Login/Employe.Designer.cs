@@ -42,17 +42,29 @@ namespace Login
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.created = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
@@ -76,7 +88,7 @@ namespace Login
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(175, 113);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(519, 24);
+            this.label7.Size = new System.Drawing.Size(440, 20);
             this.label7.TabIndex = 34;
             this.label7.Text = "Get to know the professionals who make our hotel exceptional.";
             // 
@@ -85,7 +97,7 @@ namespace Login
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(174, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(235, 25);
+            this.label5.Size = new System.Drawing.Size(208, 23);
             this.label5.TabIndex = 33;
             this.label5.Text = "Our Dedicated Employees";
             // 
@@ -95,7 +107,7 @@ namespace Login
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.Size = new System.Drawing.Size(56, 23);
             this.label1.TabIndex = 30;
             this.label1.Text = "label1";
             // 
@@ -135,7 +147,7 @@ namespace Login
             this.label3.Location = new System.Drawing.Point(179, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.Size = new System.Drawing.Size(88, 23);
             this.label3.TabIndex = 32;
             this.label3.Text = "Employees";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -146,7 +158,7 @@ namespace Login
             this.label2.Location = new System.Drawing.Point(699, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.Size = new System.Drawing.Size(0, 23);
             this.label2.TabIndex = 31;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -271,6 +283,80 @@ namespace Login
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(638, 160);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(96, 39);
+            this.button9.TabIndex = 35;
+            this.button9.Text = "Search";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(322, 165);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(310, 30);
+            this.textBox1.TabIndex = 36;
+            this.textBox1.Text = "Enter your text here"; 
+            this.textBox1.ForeColor = System.Drawing.Color.Gray; 
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.created});
+            this.dataGridView1.Location = new System.Drawing.Point(179, 246);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(759, 272);
+            this.Load += new System.EventHandler(this.Employe_Load);
+            this.dataGridView1.TabIndex = 37;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nom Complet";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Last Login";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // created
+            // 
+            this.created.HeaderText = "Created At";
+            this.created.Name = "created";
+            this.created.ReadOnly = true;
+            // 
             // Employe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,7 +370,7 @@ namespace Login
             this.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "home";
-            this.Load += new System.EventHandler(this.utilisateur_Load);
+            this.Load += new System.EventHandler(this.Employe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -293,6 +379,7 @@ namespace Login
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,5 +412,13 @@ namespace Login
         private DataGridViewTextBoxColumn createdatDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn lastloginDataGridViewTextBoxColumn;
+        private Button button9;
+        private TextBox textBox1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn created;
     }
 }

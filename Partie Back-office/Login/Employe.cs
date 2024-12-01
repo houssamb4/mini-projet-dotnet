@@ -24,39 +24,38 @@ namespace Login
 
         Database bd = new Database();
 
-        private void utilisateur_Load(object sender, EventArgs e)
+        private void Employe_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hotelDataSet.Utilisateur' table. You can move, or remove it, as needed.
             label2.Text = Login.LoggedInUserFullName;
 
 
-            LoadStatistics();
+            LoadData();
         }
 
-        private void LoadStatistics()
+        private void LoadData()
         {
             try
             {
                 bd.OpenConnexion();
+                string query = "SELECT nom_complet, email, status, last_login, created_at FROM Utilisateur";
 
-                SqlCommand cmdClients = new SqlCommand("SELECT COUNT(*) FROM Client", bd.getConnexion);
-                int totalClients = (int)cmdClients.ExecuteScalar();
-                //lblTotalClients.Text = totalClients.ToString();
+                using (SqlCommand command = new SqlCommand(query, bd.getConnexion))
+                {
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
 
-                SqlCommand cmdUsers = new SqlCommand("SELECT COUNT(*) FROM Utilisateur", bd.getConnexion);
-                int totalUsers = (int)cmdUsers.ExecuteScalar();
-                //lblTotalUsers.Text = totalUsers.ToString();
-
-                // Count Reservations
-                SqlCommand cmdReservations = new SqlCommand("SELECT COUNT(*) FROM reservation", bd.getConnexion);
-                int totalReservations = (int)cmdReservations.ExecuteScalar();
-                //lblTotalReservations.Text = totalReservations.ToString();
-
-                bd.CloseConnexion();
+                    dataGridView1.DataSource = dataTable; 
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading statistics: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                bd.CloseConnexion();
             }
         }
 
