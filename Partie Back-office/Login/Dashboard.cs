@@ -142,7 +142,6 @@ namespace Login
             }
             catch (Exception ex)
             {
-                // Handle any errors gracefully
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

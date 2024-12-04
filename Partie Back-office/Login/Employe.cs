@@ -26,7 +26,6 @@ namespace Login
 
         private void Employe_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hotelDataSet.Utilisateur' table. You can move, or remove it, as needed.
             label2.Text = Login.LoggedInUserFullName;
 
 
@@ -50,14 +49,22 @@ namespace Login
 
                     foreach (DataRow row in dataTable.Rows)
                     {
-                        var lastLogin = row["last_login"] == DBNull.Value ? DateTime.Now : row["last_login"];
+                        DateTime lastLogin = row["last_login"] == DBNull.Value
+                            ? DateTime.Now
+                            : Convert.ToDateTime(row["last_login"]);
+                        string lastLoginText = GetRelativeTime(lastLogin);
+
+                        DateTime createdAt = row["created_at"] == DBNull.Value
+                            ? DateTime.Now
+                            : Convert.ToDateTime(row["created_at"]);
+                        string createdAtText = GetRelativeTime(createdAt);
 
                         dataGridView1.Rows.Add(
                             row["nom_complet"],
                             row["email"],
                             row["status"],
-                            lastLogin,
-                            row["created_at"]
+                            lastLoginText,
+                            createdAtText
                         );
                     }
                 }
@@ -71,6 +78,23 @@ namespace Login
                 bd.CloseConnexion();
             }
         }
+
+        private string GetRelativeTime(DateTime dateTime)
+        {
+            TimeSpan timeSpan = DateTime.Now - dateTime;
+
+            if (timeSpan.TotalMinutes < 1)
+                return "Just now";
+            else if (timeSpan.TotalMinutes < 60)
+                return $"{Math.Floor(timeSpan.TotalMinutes)} minutes ago";
+            else if (timeSpan.TotalHours < 24)
+                return $"{Math.Floor(timeSpan.TotalHours)} hours ago";
+            else if (timeSpan.TotalDays < 7)
+                return $"{Math.Floor(timeSpan.TotalDays)} days ago";
+            else
+                return dateTime.ToString("MMM dd, yyyy");
+        }
+
 
 
 
@@ -123,7 +147,6 @@ namespace Login
             }
             catch (Exception ex)
             {
-                // Handle any errors gracefully
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -134,7 +157,6 @@ namespace Login
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
 
-        // Example usage for dragging the form
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -226,6 +248,11 @@ namespace Login
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

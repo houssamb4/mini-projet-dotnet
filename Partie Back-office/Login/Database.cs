@@ -6,7 +6,7 @@ namespace Login
 {
     class Database
     {
-        private SqlConnection con = new SqlConnection(@"Server=DESKTOP-9G04GPU\SQLEXPRESS;Database=hotel;Trusted_Connection=True;");
+        private SqlConnection con = new SqlConnection(@"Server=HP\SQLEXPRESS;Database=hotel;Trusted_Connection=True;");
 
         public SqlConnection getConnexion
         {

@@ -29,15 +29,15 @@ namespace Login
 
 
 
-        private void home_Load(object sender, EventArgs e)
+        private void Account_load(object sender, EventArgs e)
         {
+            LoadUserDetails();
         }
 
 
 
         private int GetCurrentUserId()
         {
-            // Access the property directly
             return Login.LoggedInUserID;
         }
 
@@ -84,7 +84,6 @@ namespace Login
             }
             catch (Exception ex)
             {
-                // Handle any errors gracefully
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -98,12 +97,78 @@ namespace Login
 
         private void tableauClient_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Handle the cell content click if needed
         }
+
+        private void LoadUserDetails()
+        {
+            try
+            {
+                int userId = GetCurrentUserId(); 
+                bd.OpenConnexion();
+                string query = "SELECT * FROM Utilisateur WHERE id = @userId";
+
+                using (SqlCommand command = new SqlCommand(query, bd.getConnexion))
+                {
+                    command.Parameters.AddWithValue("@userId", userId);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            txtNom.Text = reader["nom_complet"].ToString();
+                            txtEmail.Text = reader["email"].ToString();
+                            createdat.Text = reader["created_at"].ToString();
+                            status.Text = reader["status"].ToString();
+                            if (reader["last_login"] == DBNull.Value || string.IsNullOrEmpty(reader["last_login"].ToString()))
+                            {
+                                last_login.Text = "Now"; 
+                            }
+                            else
+                            {
+                                last_login.Text = Convert.ToDateTime(reader["last_login"]).ToString("g"); 
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("User details not found!");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                bd.CloseConnexion();
+            }
+        }
+
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void createdat_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+       private void last_login_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void status_TextChanged(object sender, EventArgs e)
+        {
+        }
+
 
         private void label4_Click(object sender, EventArgs e)
         {
-            // Handle label click if needed
         }
 
 
@@ -131,7 +196,9 @@ namespace Login
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Employe Emp = new Employe();
+            Emp.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -156,10 +223,6 @@ namespace Login
 
         }
 
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void ErrorPhone_Click(object sender, EventArgs e)
         {
@@ -182,6 +245,69 @@ namespace Login
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Do you really want to delete this account?",
+                "Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    int userId = GetCurrentUserId(); 
+                    bd.OpenConnexion();
+                    string query = "DELETE FROM Utilisateur WHERE id = @userId";
+
+                    using (SqlCommand command = new SqlCommand(query, bd.getConnexion))
+                    {
+                        command.Parameters.AddWithValue("@userId", userId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Account deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            this.Hide(); 
+                            Form1 form1 = new Form1();
+                            form1.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Account deletion failed. User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    bd.CloseConnexion();
+                }
+            }
+        }
+
+
+        private void button9_Click(object sender, EventArgs e)
         {
 
         }

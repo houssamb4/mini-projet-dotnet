@@ -30,6 +30,12 @@ namespace Login
 
 
             LoadStatistics();
+            LoadData();
+        }
+
+        private int GetCurrentUserId()
+        {
+            return Login.LoggedInUserID;
         }
 
         private void LoadStatistics()
@@ -38,21 +44,25 @@ namespace Login
             {
                 bd.OpenConnexion();
 
-                SqlCommand cmdPaiements = new SqlCommand("SELECT COUNT(*) FROM paiement", bd.getConnexion);
-                object resultPaiements = cmdPaiements.ExecuteScalar();
-                int totalPaiements = resultPaiements != null ? Convert.ToInt32(resultPaiements) : 0;
-                label14.Text = totalPaiements.ToString();
-
                 SqlCommand cmdAvailableRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 'Available'", bd.getConnexion);
                 object resultAvailableRooms = cmdAvailableRooms.ExecuteScalar();
                 int totalAvailableRooms = resultAvailableRooms != null ? Convert.ToInt32(resultAvailableRooms) : 0;
                 label9.Text = totalAvailableRooms.ToString();
 
+                SqlCommand cmdOccupiedRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 'Occupied'", bd.getConnexion);
+                object resultOccupiedRooms = cmdOccupiedRooms.ExecuteScalar();
+                int totalOccupiedRooms = resultOccupiedRooms != null ? Convert.ToInt32(resultOccupiedRooms) : 0;
+                label11.Text = totalOccupiedRooms.ToString();
 
                 SqlCommand cmdRooms = new SqlCommand("SELECT COUNT(*) FROM chambre", bd.getConnexion);
                 object resultRooms = cmdRooms.ExecuteScalar();
                 int totalRooms = resultRooms != null ? Convert.ToInt32(resultRooms) : 0;
                 label13.Text = totalRooms.ToString();
+
+                SqlCommand cmdUnderRooms = new SqlCommand("SELECT COUNT(*) FROM chambre WHERE status = 'Under Maintenance'", bd.getConnexion);
+                object resultUnderRooms = cmdUnderRooms.ExecuteScalar();
+                int totalUnderRooms = resultUnderRooms != null ? Convert.ToInt32(resultUnderRooms) : 0;
+                label14.Text = totalUnderRooms.ToString();
 
 
                 bd.CloseConnexion();
@@ -63,9 +73,94 @@ namespace Login
             }
         }
 
+        private void LoadData()
+        {
+            try
+            {
+                bd.OpenConnexion();
+
+                // Join the chambre and type_chambre tables to get the description
+                string query = @"
+            SELECT 
+                c.num_chambre, 
+                tc.description AS type_description, 
+                c.status
+            FROM chambre c
+            INNER JOIN type_chambre tc ON c.type_chambre_id = tc.id";
+
+                using (SqlCommand command = new SqlCommand(query, bd.getConnexion))
+                {
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    dataGridView1.AutoGenerateColumns = false;
+
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        dataGridView1.Rows.Add(
+                            row["num_chambre"],
+                            row["type_description"], 
+                            row["status"]
+                        );
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                bd.CloseConnexion();
+            }
+        }
+
+
+        private void UpdateUserStatus()
+        {
+            string updateQuery = @"
+        UPDATE Utilisateur
+        SET status = 'offline', last_login = GETDATE()
+        WHERE id = @UserId";
+
+            try
+            {
+                bd.OpenConnexion();
+                using (SqlConnection connection = bd.getConnexion)
+                {
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        int userId = GetCurrentUserId();
+
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating user status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                bd.CloseConnexion();
+            }
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                UpdateUserStatus();
+
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -77,42 +172,6 @@ namespace Login
         private void tableauClient_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Create the columns
-            dataGridView1.Columns.Add("Activity", "Activity");
-            dataGridView1.Columns.Add("PerformedBy", "Performed By");
-            dataGridView1.Columns.Add("DateTime", "Date & Time");
-            dataGridView1.Columns.Add("Status", "Status");
-
-            // Add sample rows
-            dataGridView1.Rows.Add("Reservation #1024 confirmed", "Admin John", "2024-11-23 10:30 AM", "Confirmed");
-            dataGridView1.Rows.Add("Payment of $300 received for Reservation #1020", "Admin Sarah", "2024-11-22 04:15 PM", "Paid");
-            dataGridView1.Rows.Add("Room #101 assigned to John Doe", "Admin Sarah", "2024-11-22 02:00 PM", "Assigned");
-
-            // Optionally, format the Status column
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                string status = row.Cells["Status"].Value.ToString();
-                if (status == "Confirmed")
-                {
-                    row.Cells["Status"].Style.BackColor = Color.Green;
-                    row.Cells["Status"].Style.ForeColor = Color.White;
-                }
-                else if (status == "Paid")
-                {
-                    row.Cells["Status"].Style.BackColor = Color.Blue;
-                    row.Cells["Status"].Style.ForeColor = Color.White;
-                }
-                else if (status == "Assigned")
-                {
-                    row.Cells["Status"].Style.BackColor = Color.Orange;
-                    row.Cells["Status"].Style.ForeColor = Color.White;
-                }
-            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -215,6 +274,11 @@ namespace Login
         }
 
         private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
