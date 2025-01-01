@@ -1,0 +1,659 @@
+﻿@page
+@model Partie_Font_Office.Pages.rooms.singleModel
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Golden Horizon Hotel</title>
+    <link rel="shortcut icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+        .brand {
+            background-color: #a18f7b;
+        }
+
+        .hotel-heading {
+            margin-left: 85px;
+            color: #ffe4d1;
+        }
+
+        .navigation-list1:hover {
+            color: #000;
+        }
+
+        /* Room Reservation Section */
+        .room-reservation {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 2rem;
+            background-color: #f8f8f8;
+        }
+
+        .reservation-content {
+            flex: 1;
+            padding: 1.5rem;
+        }
+
+        .reservation-heading {
+            font-size: 2rem;
+            text-align: center;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .underline {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .big-underline {
+            width: 80px;
+            height: 3px;
+            background-color: #ff7b54;
+        }
+
+        .small-underline {
+            width: 40px;
+            height: 3px;
+            background-color: #ff7b54;
+        }
+
+        .reservation-paragraph {
+            font-size: 1rem;
+            text-align: center;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .reservation-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .form-group label {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                color: #333;
+            }
+
+            .form-group input,
+            .form-group select {
+                padding: 0.8rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+        .reservation-btn {
+            grid-column: span 2;
+            padding: 0.8rem;
+            background-color: #ff7b54;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .reservation-btn:hover {
+                background-color: #e06a42;
+            }
+
+        /* Room Details Section */
+        .room-details {
+            padding: 2rem;
+            background-color: #f8f8f8;
+        }
+
+        .details-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .details-heading {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .details-intro {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .room-details-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .room-image {
+            flex: 1;
+        }
+
+        .detail-img {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .room-info {
+            flex: 1;
+            padding: 1rem;
+            width: 100%;
+            height: 250px;
+        }
+
+        .room-name {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .room-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .room-amenities {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+            .room-amenities li {
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .room-amenities i {
+                font-size: 1.2rem;
+                color: #ff7b54;
+                margin-right: 0.5rem;
+            }
+
+        .room-pricing {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .book-now-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #ff7b54;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .book-now-btn:hover {
+                background-color: #e06a42;
+            }
+
+        .room-details {
+            margin-left: 65px;
+        }
+
+        .room-info {
+            padding: 3.5rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .room-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .room-name {
+            font-size: 2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .room-rating {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: #ff7b54;
+        }
+
+            .room-rating .stars i {
+                margin-right: 2px;
+            }
+
+            .room-rating .rating-score {
+                margin-left: 8px;
+                color: #555;
+            }
+
+        .room-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .room-amenities {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+            .room-amenities li {
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .room-amenities i {
+                font-size: 1.2rem;
+                color: #ff7b54;
+                margin-right: 0.5rem;
+            }
+
+        .room-pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pricing-details {
+            text-align: left;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .availability {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .pricing-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .book-now-btn,
+        .view-details-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: #ff7b54;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .book-now-btn:hover,
+            .view-details-btn:hover {
+                background-color: #e06a42;
+            }
+
+        .view-details-btn {
+            background-color: #6c757d;
+        }
+
+            .view-details-btn:hover {
+                background-color: #5a6268;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+
+        <input type="checkbox" class="checkbox" id="click" hidden>
+
+        <div class="sidebar">
+            <label for="click">
+                <div class="menu-icon">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </label>
+
+            <ul class="social-icons-list">
+                <li>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+
+            <div class="year">
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <div class="navigation-header">
+                <h1 class="navigation-heading">Golden Horizon Hotel</h1>
+
+
+            </div>
+
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <a href="index.html" class="navigation-link">Home</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="index.html#about" class="navigation-link">about us</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="index.html#Rooms" class="navigation-link">rooms</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="index.html#Customers" class="navigation-link">customers</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="index.html#contact" class="navigation-link">contact</a>
+                </li>
+            </ul>
+
+            <div class="copyright">
+                <p>&copy2024 Golden Horizon Hotel. All rights reserved</p>
+            </div>
+        </nav>
+    </div>
+
+    <header>
+        <div class="overlay">
+            <div class="brand">
+                <h3 class="hotel-heading">Golden Horizon Hotel</h3>
+            </div>
+            <nav class="navigation1">
+                <ul class="navigation-list1">
+                    <li class="navigation-item1">
+                        <a href="index.html" class="navigation-link">Home</a>
+                    </li>
+                    <li class="navigation-item1">
+                        <a href="index.html#about" class="navigation-link">About Us</a>
+                    </li>
+                    <li class="navigation-item1">
+                        <a href="index.html#Rooms" class="navigation-link">Rooms</a>
+                    </li>
+                    <li class="navigation-item1">
+                        <a href="index.html#Customers" class="navigation-link">Customers</a>
+                    </li>
+                    <li class="navigation-item1">
+                        <a href="index.html#contact" class="navigation-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+    </header>
+
+    <section class="room-details" id="room-details">
+        <div class="details-header">
+            <h1 class="details-heading">Single Bed Room Details</h1>
+            <div class="underline">
+                <div class="big-underline"></div>
+            </div>
+            <p class="details-intro">
+                Perfect for solo travelers, our Single Bed Room offers a cozy and comfortable space with all essential amenities.
+            </p>
+        </div>
+
+        <div class="room-details-content">
+            <figure class="room-image">
+                <img src="https://hotelhavanabulgaria.com/wp-content/uploads/2020/07/single-room-1.jpg" alt="Single Bed Room" class="detail-img">
+            </figure>
+
+            <div class="room-info">
+                <div class="room-header">
+                    <h2 class="room-name">Single Bed Room</h2>
+                    <div class="room-rating">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span class="rating-score">4.5/5</span>
+                    </div>
+                </div>
+
+                <p class="room-description">
+                    A compact yet comfortable room featuring a single bed, modern decor, and a peaceful ambiance. Ideal for solo travelers or business trips.
+                </p>
+
+                <ul class="room-amenities">
+                    <li><i class="fas fa-wifi"></i> Free Wi-Fi</li>
+                    <li><i class="fas fa-tv"></i> 32" LED TV</li>
+                    <li><i class="fas fa-utensils"></i> Complimentary Breakfast</li>
+                    <li><i class="fas fa-coffee"></i> Coffee Maker</li>
+                    <li><i class="fas fa-shower"></i> Private Bathroom</li>
+                    <li><i class="fas fa-desk"></i> Work Desk</li>
+                </ul>
+
+                <div class="room-pricing">
+                    <div class="pricing-details">
+                        <p class="price">
+                            <strong>$99.00</strong> per night
+                        </p>
+                        <p class="availability">Available now</p>
+                    </div>
+                    <div class="pricing-buttons">
+                        <button class="book-now-btn" onclick="location.href='../reservation/single'">
+                            Book Now <i class="fas fa-angle-double-right btn-arrow"></i>
+                        </button>
+                        <button class="view-details-btn" onclick="location.href='./single'">
+                            View Details <i class="fas fa-info-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+
+
+    <footer class="footer">
+        <div class="main-part">
+            <div class="footer-list-wrapper">
+                <h3 class="footer-heading">Golden Horizon Hotel</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-list-link">
+                            support@goldenhorizon.com
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-list-link">
+                            Marrakech, Main Street 123
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#" class="footer-list-link">
+                            Tel: +123 456 789
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-list-wrapper">
+                <h3 class="footer-heading">Explore</h3>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="index.html" class="footer-list-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#about" class="footer-list-link">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#Rooms" class="footer-list-link">
+                            Rooms
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#Customers" class="footer-list-link">
+                            Customers
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="#contact" class="footer-list-link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h3 class="footer-heading">Contact</h3>
+                <p>Sign Up for News</p>
+                <div class="input-wrapper">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g data-name="Layer 2">
+                            <g data-name="inbox">
+                                <rect width="24"
+                                      height="24"
+                                      transform="rotate(180 12 12)"
+                                      opacity="0"></rect>
+                                <path d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <input type="text" name="text" class="input" placeholder="Your email..." />
+                    <button class="Subscribe-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="30"
+                             height="10"
+                             viewBox="0 0 38 15"
+                             class="arrow">
+                            <path d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"></path>
+                        </svg>Sign Up
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <h3 class="footer-heading">Gallery</h3>
+                <div class="gallery-images">
+                    <div class="image-wrapper">
+                        <img src="img/gallery5.jpg" class="footer-image">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/gallery2.jpg" class="footer-image">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/gallery3.jpg" class="footer-image">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/gallery4.jpg" class="footer-image">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/gallery1.jpg" class="footer-image">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/gallery6.jpg" class="footer-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="creator-part">
+            <div class="copyright-text">
+                <p>Copyright &copy; 2024. Golden Horizon Hotel. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".footer-image");
+            const images1 = document.querySelectorAll(".detail-img");
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightbox-image");
+            const close = document.querySelector(".lightbox .close");
+
+            images1.forEach(image => {
+                image.addEventListener("click", () => {
+                    lightbox.style.display = "flex";
+                    lightboxImage.src = image.src;
+                });
+            });
+
+            images.forEach(image => {
+                image.addEventListener("click", () => {
+                    lightbox.style.display = "flex";
+                    lightboxImage.src = image.src;
+                });
+            });
+
+            close.addEventListener("click", () => {
+                lightbox.style.display = "none";
+            });
+
+            lightbox.addEventListener("click", (event) => {
+                if (event.target === lightbox) {
+                    lightbox.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ReservationController",
+    "Method": "Reserve",
+    "RelativePath": "api/reservation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Partie_Font_Office.Models.ReservationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
